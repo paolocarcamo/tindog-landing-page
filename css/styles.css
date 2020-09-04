@@ -1,0 +1,288 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  color: gray;
+  font-size: 1rem;
+}
+
+/* HEADINGS */
+
+.big-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+.cta-button {
+  margin: 0 15px;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-item {
+  padding: 15px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+/* SECTIONS */
+
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* TITLE SECTION */
+
+#title {
+  padding-bottom: 13%;
+  text-align: left;
+}
+
+.iphone-pic {
+  transform: rotate(25deg);
+  width: 75%;
+  margin: 0 0 0 10%;
+  position: absolute;
+  right: 10%
+}
+
+/* FEATURE SECTION */
+
+#features {
+  padding: 3% 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.feature-box {
+  padding: 5%;
+  background-color: #fff;
+}
+
+/* I originally had the styles on the features section, but instead Angela added a new class
+   to the features div boxes and it makes more sense to just style those separately, as above. */
+
+.feature-title {
+  font-weight: bold;
+}
+
+.micon {
+  padding: 5% 0;
+  color: #ef8172;
+}
+
+.micon:hover {
+  color: #ff4c68;
+}
+
+/* TESTIMONIALS */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.testimonial-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px
+}
+
+/* PRICING SECTION */
+
+#pricing {
+  padding: 100px;
+}
+
+.pricing-text {
+  font-size: 2.3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.pricing-title {
+  padding-top: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CALL TO ACTOIN & FOOTER */
+
+#cta {
+  padding: 3% 0 5%;
+}
+
+#footer {
+  padding: 5% 0 3%;
+}
+
+.ctah {
+  padding: 2% 25%;
+  font-size: 2em;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.social {
+  margin: 0 5px;
+  color: #000;
+}
+
+/* MEDIA QUERY BREAKPOINT */
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .iphone-pic {
+    position: static;
+    transform: rotate(0);
+
+  }
+}
+
+/* CSS Link Order: >REMEMBER< in order to have your curated styles override the Bootstrap styles, your own stylesheet
+should be placed AFTER the bootstrap load-in link. This will allow Bootstrap to load first, then you can override it. */
+
+/* A normal container will give you some automatic padding and a container-fluid will give you full window responisveness
+when it comes to the grid system response. */
+
+/* https://fontawesome.com vector icons & social icons galore */
+
+/* When you start running into the probelm of trying to differentiate your class from preexisitng classes, it's better to
+have your own custom class so that they are not affecting the built-in styling */
+
+/* aria-properties eg. - aria-control & control-hidden - are used for the computer to provide an item to narrate
+   commands to a person that may be visually impaired */
+
+/* It's good to use something like CODEPLY to preview an item that has functionality in it so that you can
+   safely see it in action without messing with any preexisitng code that you may already have*/
+
+/* bootsnip.com to get snippets of items you can use */
+
+/* Z-index: with reference to using 3 DIV's that are stacked on top of each other, we can use the combination
+   ABSOLUTE POSITION and tweaking so that we can tap into the Z-index and manipulate content on the screen.
+   > NOTE: the default z-index of an item is at "0" - then -> with manipulating the number used (POSITIVE OR NEGATIVE)
+     you can disrupt and reorder content, disrupting the default order of what is written in your HTML code
+   > When you have one DIV specified to have a position - Absolute, Relative  or Fixed- but try to add z-indexes to your
+     DIV's it will not work, because they default to their static positioning
+   > So long as you give an element a position - separately or globably - you can affect its z-index
+*/
+
+/* MEDIA QUERY BREAKPOINTS | @media <type> <feature>
+
+   EXAMPLE:
+
+   h1 {
+      font-size: 30px; <-------- font-size set before media query breakpoint
+   }
+
+   @media (max-width: 900px) {
+
+   h1 {
+      font-size: 60px; <--------- once the screen size is less than 900px font-size grows larger
+   }
+
+   }
+
+  > you can also combine parameters: @media (min-width: 900px) and (max-width: 1000px)
+    - this means that there is a small gap of 100px that the code you write will allow this to work
+
+*/
+
+/* CODE REFACTORING - this is why we want to refactor everything to make it more efficient:
+   1. Readability 2. Modality 3. Efficiency 4. Length
+
+  > You can target multiple elements (of the same type) by separating each with a comma.
+
+*/
+
+/* COMBINING SELECTORS - we read combinations from right to left
+
+  > MULTIPLE SELECTORS: as above - you can combine MAIN HTML selectors by using commas
+  > HIERARCHIAL SELECTORS: #title .container-fluid { //CODE } - this breaks down like so:
+    - selector1 selector2 { //CODE }
+    - this can only work within a PARENT - CHILD combination
+  > COMBINED SELECTORS: selector1.selector2 { //CODE }
+    - this can be HTML + CLASS or HTML + ID ---> they need to occur in the same element
+    - element .class vs element.class
+      [element .class] = every "class" within the element parent, will be effected
+      [element.class] = every "class" combined with another element will be affected, but this
+                        won't work because it does not have a parent that it belongs to. This would
+                        be something that combines multiple different types of selectors to affect it
+  > EFFICIENCY: in order to be more precise, it'd be better to combine selectors instead of adding more
+    custom CLASSES or IDS to your code
+*/
+
+
+/* SELECTOR PRIORITY: id -> class -> element
+  > ID - Highest Priority
+    CLASS - Next Priority
+    ELEMENT - Least Priority */
